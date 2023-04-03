@@ -12,8 +12,9 @@ class DropdownsCubit extends Cubit<DropdownsState> {
         state_selected: DropdownsState.states[DropdownsState.countries[0]]![0],
         city_selected: DropdownsState.cities[DropdownsState.states[DropdownsState.countries[0]]![0]]![0],
         show_countries: DropdownsState.countries,
-        show_states: DropdownsState.states[state.country_selected] ?? [],
-        show_cities: DropdownsState.cities[state.state_selected] ?? []));
+        show_states: DropdownsState.states[DropdownsState.countries[0]] ?? [],
+        show_cities: DropdownsState.cities[DropdownsState.states[DropdownsState.countries[0]]![0]] ?? []));
+    print(state.toString());
   }
 
   void countryChanged(String country) {

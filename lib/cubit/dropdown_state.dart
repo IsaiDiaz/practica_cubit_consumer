@@ -49,4 +49,9 @@ class DropdownsState {
     );
   }
 
+  @override
+  String toString() {
+    return 'DropdownsState{country_selected: $country_selected, state_selected: $state_selected, city_selected: $city_selected, show_countries: $show_countries, show_states: $show_states, show_cities: $show_cities}';
+  }
+
 }
